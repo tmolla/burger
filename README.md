@@ -6,16 +6,16 @@ Burgers is a simple fullstack restaurant app that lets users input names of burg
 Home page is located at `https://git.heroku.com/secure-everglades-75450.git`.
 Intial state of the page is shown below:
 
-![Initial Burgers Page](/assets/img/InitalPage.png)
+![Initial Burgers Page](/public/assets/img/InitalPage.png)
 
 Once on the home page, enter the burger name and then click on the `Submit` button.
 The burger then will be moved to the `Ready Burgers!` section as shown below:
 
-![Showing Ready Burgers](/assets/img/BurgersReady.png)
+![Showing Ready Burgers](/public/assets/img/BurgersReady.png)
 
 Burgers can be moved to the `Devoured Burgers!` section by clicking on the `Devour!` button.
 
-![Showing Devoured Burgers](/assets/img/BurgersDevoured.png)
+![Showing Devoured Burgers](/public/assets/img/BurgersDevoured.png)
 
 User then can click on `Delete` button to remove the burger form the `Devoured` section.
 
