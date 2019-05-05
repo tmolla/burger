@@ -1,13 +1,22 @@
 //Import mysql 
 var mysql = require("mysql");
 
-//create connection object
+// //create local connection object
+// var connection = mysql.createConnection({
+//     host:"localHost",
+//     port :3306,
+//     user:"root",
+//     password:"mysql$62",
+//     database:"burgers_db"
+// });
+
+//create production connection object
 var connection = mysql.createConnection({
-    host:"localHost",
+    host:"us-cdbr-iron-east-02.cleardb.net",
     port :3306,
-    user:"root",
-    password:"mysql$62",
-    database:"burgers_db"
+    user:"b041306ed493d3",
+    password:"2b3f14f4",
+    database:"heroku_59d7dfaff61266b"
 });
 
 //make connection
