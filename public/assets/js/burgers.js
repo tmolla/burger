@@ -2,7 +2,6 @@
 $(function() {
   $(".create-form").on("submit", function(event) {
     // Make sure to preventDefault on a submit event.
-    console.log("creating")
     event.preventDefault();
 
     var newBurger = {
@@ -16,7 +15,6 @@ $(function() {
       data: newBurger
       }).then(
       function() {
-        console.log("created new burger");
         // Reload the page to get the updated list
         location.reload();
       }
@@ -24,7 +22,6 @@ $(function() {
   });
 
   $(".devour-burger").on("click", function(event) {
-    console.log("in devour burger")
     var id = $(this).data("id");
 
     var burgerState = {
@@ -36,7 +33,6 @@ $(function() {
       data: burgerState
     }).then(
       function() {
-        console.log("Updated burger", id);
         // Reload the page to get the updated list
         location.reload();
       }
@@ -45,7 +41,6 @@ $(function() {
 
 
   $(".delete-burger").on("click", function(event) {
-    console.log("in delete burger")
     var id = $(this).data("id");
 
     // Send the DELETE request.
@@ -53,7 +48,6 @@ $(function() {
       type: "DELETE"
     }).then(
       function() {
-        console.log("Deleted burger", id);
         // Reload the page to get the updated list
         location.reload();
       }

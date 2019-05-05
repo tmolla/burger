@@ -1,14 +1,13 @@
 <li>
 {{#if devoured}}
-	{{!-- {{burger_name}} --}}
-	<div class="input-group mb-3">
-		<input type="text" class="form-control" placeholder="{{burger_name}}" aria-label="Recipient's username" aria-describedby="button-addon2" readonly>
+		<div class="input-group input-group-sm mb-2">
+		<input type="text" class="form-control" placeholder="{{burger_name}}" aria-describedby="button-addon2" readonly>
 		<div class="input-group-append">
 		<button class="btn btn-secondary delete-burger" type="button" data-id={{this.id}} id="button-addon2">Delete</button>
 	</div>
 {{else}}
-	<div class="input-group mb-3">
-		<input type="text" class="form-control" placeholder="{{burger_name}}" aria-label="Recipient's username" aria-describedby="button-addon2" readonly>
+	<div class="input-group input-group-sm mb-2">
+		<input type="text" class="form-control" placeholder="{{burger_name}}" aria-describedby="button-addon2" readonly>
 		<div class="input-group-append">
 		<button class="btn btn-secondary devour-burger" type="button" data-id={{this.id}} id="button-addon2">Devour!</button>
 	</div>

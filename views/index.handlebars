@@ -1,40 +1,41 @@
-<div class="container-fluid" style="padding-top:50px; background-color:orange">
+<div class="container-fluid main-container">
+ 
   <div class="row">
-    <div class="col-lg">
-      <h2>Ready Burgers!</h2>
-      <ul>
+	<div class="col-sm middle-container">
+     <h1 class="header">Eat Da Burger</h1>
+      <img src="/assets/img/burger.png" alt="Burger">
+
+    <div style="text-align:left">
+      <form class="create-form">
+        <div class="form-group">
+            <label for="burger">Burger Name</label>
+            <input type="text" class="form-control input-sm" id="burger" placeholder="what's da burger name?" required>
+        </div>
+        <button type="submit" class="btn btn-primary btn-sm">Submit</button>
+      </form>
+      </div>
+    </div>   
+   
+    <div class="col-sm left-container">
+      <h3>Ready Burgers!</h3>
+      <ol>
         {{#each burgers}}
           {{#unless devoured}}
             {{> burgers/burger-block}}
           {{/unless}}
         {{/each}}
-      </ul>
+      </ol>
     </div>
     
-	<div class="col-lg" style="text-align: center">
-      <h2>Eat Da Burger</h2>
-      <img src="/assets/img/burger.png" alt="Burger">
-      
-      <form class="create-form">
-		<div class="form-group row">
-				<label for="burger" class="col-sm-2 col-form-label">Burger Name:</label>
-				<div class="col-sm-6">
-					<input type="text" class="form-control" id="burger" placeholder="What is da burger name?">
-				</div>
-				<button type="submit" class="btn btn-primary col-sm-2">Submit</button>
-		</div>
-      </form>
-    </div>
-
-    <div class="col-lg">
-        <h2>Devoured Burgers!</h2>
-          <ul>
+    <div class="col-sm right-container">
+        <h3>Devoured Burgers!</h3>
+          <ol>
             {{#each burgers}}
               {{#if devoured}}
                 {{> burgers/burger-block}}
               {{/if}}
             {{/each}}
-          </ul>
+          </ol>
     </div>
   </div>
 </div>
