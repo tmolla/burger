@@ -40,7 +40,9 @@ function printQuestionMarks(num) {
 //define ORM object
 var orm = {
     selectAll: function(tableInput, cb) {
+ 
         var queryString = "SELECT * FROM " + tableInput + ";";
+        
         connection.query(queryString, function(err, result) {
           if (err) {
             throw err;
@@ -48,6 +50,7 @@ var orm = {
           cb(result);
         });
       },
+
       insertOne: function(table, cols, vals, cb) {
         var queryString = "INSERT INTO " + table;
     
